@@ -6,8 +6,9 @@
  * 2. open command line to that folder
  * 3. npm init -y (-y is for answering yes to all questions.)
  * 4. npm install express (npm i express cors mongodb)
- * in package.json 
- * in scripts.js (add following 2 lines)
+ * From,
+ * package.json 
+ * in "scripts" (add following 2 lines)
  * "start": "node index.js",
     "start-dev": "nodemon index.js",
  * 5. create index.js
