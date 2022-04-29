@@ -20,8 +20,13 @@ const users = [
 
 ]
 
+// app.get('/users', (req,res) => {
+//     res.send(users);
+// })
+
+
+// filter by search query parameter
 app.get('/users', (req, res) => {
-    // filter by search query parameter
     if(req.query.name){
         const search = req.query.name.toLowerCase();
         const matched = users.filter(user => user.name.toLowerCase().includes(search))
@@ -55,13 +60,15 @@ app.post ('/user', (req,res) => {
     res.send(user);
 })
 
-app.get('/fruits', (req,res) => {
-    res.send(['mango', 'apple', 'banana', 'oranges']);
-});
+// Extraa works
 
-app.get ('/fruits/mango/fazli', (req,res) => {
-    res.send ('fazli flavor are sour!');
-})
+// app.get('/fruits', (req,res) => {
+//     res.send(['mango', 'apple', 'banana', 'oranges']);
+// });
+
+// app.get ('/fruits/mango/fazli', (req,res) => {
+//     res.send ('fazli flavor are sour!');
+// })
 
 app.listen(port,() =>{
     console.log('Listening to Port -', port);
